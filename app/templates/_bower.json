@@ -1,0 +1,22 @@
+{
+  "name": "<%= appName %>",
+  "version": "<%= appVersion %>",
+  "description": "A generator for locawebstyle.",<% if (includeNormalize || includeJQuery || includeLocawebStyle) { %>
+  "dependencies": {<% if (includeNormalize) { %>
+	  "normalize-css" : ">= 2.1.3"<% } %><% if (includeJQuery) { %><% if (includeNormalize) { %>,<% } %>
+    "jquery" : ">= 2.0.1"<% } %><% if (includeLocawebStyle) { %><% if (includeNormalize || includeJQuery) { %>,<% } %>
+    "locawebstyle" : ">= 3.7.2"<% } %>
+  },<% } %>
+  "authors": [
+    "emalherbi"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
