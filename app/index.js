@@ -29,10 +29,12 @@ MyGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
+    type: 'input',
     name: 'appName',
     message: 'What is your app\'s name ?',
     default: 'LocaWebStyle'
   }, {
+    type: 'input',
     name: 'appVersion',
     message: 'version ?',
     default: '1.0.0'
@@ -52,6 +54,7 @@ MyGenerator.prototype.askFor = function askFor() {
     message: 'Would you like to include LocawebStyle?',
     default: true
   }, {
+    type: 'input',
     name: 'nameTheme',
     message: 'Would you like to include LocawebStyle Theme (gold, green, light-green)?',
     default: 'gold'

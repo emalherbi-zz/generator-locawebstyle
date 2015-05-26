@@ -46,10 +46,9 @@ bower_components/
 ├── normalize-css/
 app/
 ├── index.html
+├── img/
 ├── css/
 │   ├── app.css
-├── img/
-│   ├── yeoman-logo.png
 └── js/
     ├── app.js
 ```
