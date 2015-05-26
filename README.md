@@ -3,7 +3,7 @@ generator-locawebstyle
 
 *A generator for Locaweb Style.*
 
-![alt tag](http://emalherbi.github.io/generator-play-ideia/img/yeoman-banner.jpg)
+![alt tag](http://emalherbi.github.io/generator-locawebstyle/theme-gold.png)
 
 What's Yeoman (yo)?
 -------------------
@@ -47,6 +47,7 @@ bower_components/
 app/
 ├── index.html
 ├── img/
+│   ├──
 ├── css/
 │   ├── app.css
 └── js/
@@ -79,8 +80,3 @@ License
 -------
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
-
-Author
-------
-
-[Eduardo Malherbi Martins](http://emalherbi.com)
