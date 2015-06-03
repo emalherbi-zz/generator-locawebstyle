@@ -1,5 +1,5 @@
-generator-locawebstyle
-======================
+[generator-locawebstyle](http://emalherbi.github.io/generator-locawebstyle/)
+========================
 
 *A generator for Locaweb Style.*
 

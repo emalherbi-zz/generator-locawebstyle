@@ -5,6 +5,21 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     properties: grunt.file.readJSON('properties.json'),
 
+    /* bower install */
+    bower: {
+      install: {
+        options: {
+          targetDir: '<%= properties.app %>/lib',
+          layout: 'byComponent',
+          install: true,
+          verbose: false,
+          cleanTargetDir: true,
+          cleanBowerDir: true,
+          bowerOptions: {}
+        }
+      }
+    },
+
     /* clean directories */
     clean: ['<%= properties.dist %>'],
 

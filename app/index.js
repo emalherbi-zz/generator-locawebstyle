@@ -7,15 +7,13 @@ var MyGenerator = module.exports = function MyGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall : options['skip-install'] });
-    /*
+    // this.installDependencies({ skipInstall : options['skip-install'] });
     this.installDependencies({
       skipInstall : this.options['skip-install'],
       callback : function () {
-        this.spawnCommand('grunt', ['bower']);
+        this.spawnCommand('grunt', ['bower:install']);
       }.bind(this) // bind the callback to the parent scope
     });
-    */
   });
 };
 
@@ -31,12 +29,12 @@ MyGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     type: 'input',
     name: 'appName',
-    message: 'What is your app\'s name ?',
+    message: 'What is your app\'s name?',
     default: 'LocaWebStyle'
   }, {
     type: 'input',
     name: 'appVersion',
-    message: 'version ?',
+    message: 'version?',
     default: '1.0.0'
   }, {
     type: 'confirm',
@@ -54,10 +52,32 @@ MyGenerator.prototype.askFor = function askFor() {
     message: 'Would you like to include LocawebStyle?',
     default: true
   }, {
-    type: 'input',
+    type: 'list',
     name: 'nameTheme',
-    message: 'Would you like to include LocawebStyle Theme (gold, green, light-green)?',
-    default: 'gold'
+    message: 'Would you like to include LocawebStyle Theme?',
+    choices:[{
+      name: 'green',
+      value: 'includeGreen',
+    },{
+      name: 'light-green',
+      value: 'includeLightGreen',
+    },{
+      name: 'blue',
+      value: 'includeBlue',
+    },{
+      name: 'gold',
+      value: 'includeGold',
+    },{
+      name: 'gray',
+      value: 'includeGray',
+    },{
+      name: 'orange',
+      value: 'includeOrange',
+    },{
+      name: 'light-red',
+      value: 'includeLightRed',
+    }],
+    default: 0
   }];
 
   this.prompt(prompts, function processAnswers(answers) {
@@ -67,7 +87,31 @@ MyGenerator.prototype.askFor = function askFor() {
     this.includeNormalize = answers.includeNormalize;
     this.includeJQuery = answers.includeJQuery;
     this.includeLocawebStyle = answers.includeLocawebStyle;
-    this.nameTheme = answers.nameTheme;
+
+    console.log(answers.nameTheme);
+    console.log(answers.nameTheme.indexOf('includeGold'));
+
+    if (answers.nameTheme.indexOf('includeGreen') !== -1) {
+      this.nameTheme = 'green';
+    }
+    else if (answers.nameTheme.indexOf('includeLightGreen') !== -1) {
+      this.nameTheme = 'light-green';
+    }
+    else if (answers.nameTheme.indexOf('includeBlue') !== -1) {
+      this.nameTheme = 'blue';
+    }
+    else if (answers.nameTheme.indexOf('includeGold') !== -1) {
+      this.nameTheme = 'gold';
+    }
+    else if (answers.nameTheme.indexOf('includeGray') !== -1) {
+      this.nameTheme = 'gray';
+    }
+    else if (answers.nameTheme.indexOf('includeOrange') !== -1) {
+      this.nameTheme = 'orange';
+    }
+    else if (answers.nameTheme.indexOf('includeLightRed') !== -1) {
+      this.nameTheme = 'light-red';
+    }
 
     if ( this.includeLocawebStyle )
       this.includeJQuery = true;

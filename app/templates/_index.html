@@ -7,8 +7,8 @@
   <title><%= appName %></title>
 
   <!-- build:css css/app.min.css -->
-  <% if (includeNormalize) { %><link rel="stylesheet" href="../bower_components/normalize-css/normalize.css"><% } %><% if (includeLocawebStyle) { %>
-  <link rel="stylesheet" href="../bower_components/locawebstyle/dist/stylesheets/locastyle.css" ><% } %>
+  <% if (includeNormalize) { %><link rel="stylesheet" href="lib/normalize-css/dist/normalize.css"><% } %><% if (includeLocawebStyle) { %>
+  <link rel="stylesheet" href="lib/locawebstyle/dist/stylesheets/locastyle.css" ><% } %>
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
 
@@ -139,8 +139,8 @@
   </aside>
 
   <!-- build:js js/app.min.js -->
-  <% if (includeJQuery) { %><script src="../bower_components/jquery/dist/jquery.min.js"></script><% } %><% if (includeLocawebStyle) { %>
-  <script src="../bower_components/locawebstyle/dist/javascripts/locastyle.js"></script><% } %>
+  <% if (includeJQuery) { %><script src="lib/jquery/dist/jquery.min.js"></script><% } %><% if (includeLocawebStyle) { %>
+  <script src="lib/locawebstyle/dist/javascripts/locastyle.js"></script><% } %>
   <script src="js/app.js"></script>
   <!-- endbuild -->
 </body>
