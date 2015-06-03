@@ -1,5 +1,5 @@
-generator-locawebstyle
-======================
+[generator-locawebstyle](http://emalherbi.github.io/generator-locawebstyle/)
+========================
 
 *A generator for Locaweb Style.*
 
@@ -40,21 +40,21 @@ yo locawebstyle
 ### Layout
 
 ```
-bower_components/
-├── jquery/
-├── locawebstyle/
-├── normalize-css/
 app/
-├── index.html
-├── img/
-│   ├──
 ├── css/
 │   ├── app.css
-└── js/
-    ├── app.js
+├── img/
+│   ├──
+├── js/
+│   ├── app.js
+├── lib/
+│   ├── jquery/
+│   ├── locawebstyle/
+│   ├── normalize-css/
+├── index.html
 ```
 
-*The bower dependencies are installed in another directory.*
+*The bower dependencies are installed in lib directory.*
 
 How This Generator Works
 ------------------------

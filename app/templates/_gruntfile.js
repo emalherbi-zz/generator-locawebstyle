@@ -5,6 +5,21 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     properties: grunt.file.readJSON('properties.json'),
 
+    /* bower install */
+    bower: {
+      install: {
+        options: {
+          targetDir: '<%= properties.app %>/lib',
+          layout: 'byComponent',
+          install: true,
+          verbose: false,
+          cleanTargetDir: true,
+          cleanBowerDir: true,
+          bowerOptions: {}
+        }
+      }
+    },
+
     /* clean directories */
     clean: ['<%= properties.dist %>'],
 
@@ -79,7 +94,7 @@ module.exports = function(grunt) {
           /* fonts */
           expand: true,
           dot: true,
-          cwd: '<%= properties.bower %>/locawebstyle/dist/stylesheets/fonts',
+          cwd: '<%= properties.lib %>/locawebstyle/dist/stylesheets/fonts',
           dest: '<%= properties.dist %>/css/fonts',
           src: ['*.ttf', '*.woff']
         }]

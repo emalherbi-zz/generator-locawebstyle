@@ -18,5 +18,16 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "exportsOverride": {
+    "normalize-css": {
+      "dist": "**.css"
+    },
+    "jquery": {
+      "dist": "dist/**.js"
+    },
+    "locawebstyle": {
+      "dist": "*"
+    }
+  }
 }
