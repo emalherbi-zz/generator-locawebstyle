@@ -12,7 +12,7 @@ var MyGenerator = module.exports = function MyGenerator(args, options, config) {
       skipInstall : this.options['skip-install'],
       callback : function () {
         this.spawnCommand('grunt', ['bower:install']);
-      }.bind(this) // bind the callback to the parent scope
+      }.bind(this)
     });
   });
 };
@@ -41,7 +41,7 @@ MyGenerator.prototype.askFor = function askFor() {
     name: 'includeNormalize',
     message: 'Would you like to include normalize.css?',
     default: true
-  }, {
+  }, /*{
     type: 'confirm',
     name: 'includeJQuery',
     message: 'Would you like to include jQuery?',
@@ -51,31 +51,31 @@ MyGenerator.prototype.askFor = function askFor() {
     name: 'includeLocawebStyle',
     message: 'Would you like to include LocawebStyle?',
     default: true
-  }, {
+  },*/ {
     type: 'list',
     name: 'nameTheme',
     message: 'Would you like to include LocawebStyle Theme?',
     choices:[{
       name: 'green',
-      value: 'includeGreen',
+      value: 'includeGreen'
     },{
       name: 'light-green',
-      value: 'includeLightGreen',
+      value: 'includeLightGreen'
     },{
       name: 'blue',
-      value: 'includeBlue',
+      value: 'includeBlue'
     },{
       name: 'gold',
-      value: 'includeGold',
+      value: 'includeGold'
     },{
       name: 'gray',
-      value: 'includeGray',
+      value: 'includeGray'
     },{
       name: 'orange',
-      value: 'includeOrange',
+      value: 'includeOrange'
     },{
       name: 'light-red',
-      value: 'includeLightRed',
+      value: 'includeLightRed'
     }],
     default: 0
   }];
@@ -85,11 +85,8 @@ MyGenerator.prototype.askFor = function askFor() {
     this.appName = answers.appName;
     this.appVersion = answers.appVersion;
     this.includeNormalize = answers.includeNormalize;
-    this.includeJQuery = answers.includeJQuery;
-    this.includeLocawebStyle = answers.includeLocawebStyle;
-
-    console.log(answers.nameTheme);
-    console.log(answers.nameTheme.indexOf('includeGold'));
+    this.includeJQuery = true; //answers.includeJQuery;
+    this.includeLocawebStyle = true; //answers.includeLocawebStyle;
 
     if (answers.nameTheme.indexOf('includeGreen') !== -1) {
       this.nameTheme = 'green';
@@ -113,8 +110,9 @@ MyGenerator.prototype.askFor = function askFor() {
       this.nameTheme = 'light-red';
     }
 
-    if ( this.includeLocawebStyle )
+    if (this.includeLocawebStyle) {
       this.includeJQuery = true;
+    }
 
     done();
   }.bind(this));

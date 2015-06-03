@@ -94,7 +94,7 @@ module.exports = function(grunt) {
           /* fonts */
           expand: true,
           dot: true,
-          cwd: '<%= properties.bower %>/locawebstyle/dist/stylesheets/fonts',
+          cwd: '<%= properties.lib %>/locawebstyle/dist/stylesheets/fonts',
           dest: '<%= properties.dist %>/css/fonts',
           src: ['*.ttf', '*.woff']
         }]
