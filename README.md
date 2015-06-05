@@ -1,9 +1,11 @@
 [generator-locawebstyle](http://emalherbi.github.io/generator-locawebstyle/)
 ========================
 
-*A generator for Locaweb Style.*
+*A generator for [Locaweb Style](http://opensource.locaweb.com.br/locawebstyle/).*
 
-![alt tag](http://emalherbi.github.io/generator-locawebstyle/theme-gold.png)
+![alt tag](http://emalherbi.github.io/generator-locawebstyle/yo.png)
+
+![alt tag](http://emalherbi.github.io/generator-locawebstyle/yo-gold.png)
 
 What's Yeoman (yo)?
 -------------------
