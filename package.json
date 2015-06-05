@@ -1,6 +1,6 @@
 {
   "name": "generator-locawebstyle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A generator for locawebstyle.",
   "main": "app/index.js",
   "scripts": {
