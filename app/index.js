@@ -30,7 +30,7 @@ MyGenerator.prototype.askFor = function askFor() {
     type: 'input',
     name: 'appName',
     message: 'What is your app\'s name?',
-    default: 'LocaWebStyle'
+    default: 'LocawebStyle'
   }, {
     type: 'input',
     name: 'appVersion',
