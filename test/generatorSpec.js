@@ -76,24 +76,4 @@ describe("Mocha/Grunt generator test suite", function(){
     });
   });
 
-  /*
-  describe('File Customization', function(){
-    it('should update bower.js with prompt data', function(){
-      assert.fileContent('bower.json', /['|"]*name['|"]*[ ]*:[ ]*['|"]repo-gen-test['|"]/);
-      assert.fileContent('bower.json', /['|"]*description['|"]*[ ]*:[ ]*['|"]Unit Test Gen['|"]/);
-      assert.fileContent('bower.json', /['|"]*homepage['|"]*[ ]*:[ ]*['|"]http:\/\/github.com['|"]/);
-      assert.fileContent('bower.json', /['|"]*main['|"]*[ ]*:[ ]*['|"]repo-gen-test.js['|"]/);
-    });
-    it('should update package.json with prompt data', function(){
-      assert.fileContent('package.json', /['|"]*name['|"]*[ ]*:[ ]*['|"]repo-gen-test['|"]/);
-      assert.fileContent('package.json', /['|"]*title['|"]*[ ]*:[ ]*['|"]Repo Gen Test['|"]/);
-      assert.fileContent('package.json', /['|"]*description['|"]*[ ]*:[ ]*['|"]Unit Test Gen['|"]/);
-      assert.fileContent('package.json', /['|"]*main['|"]*[ ]*:[ ]*['|"]repo-gen-test.js['|"]/);
-      assert.fileContent('package.json', /['|"]*url['|"]*[ ]*:[ ]*['|"]http:\/\/github.com['|"]/);
-      assert.fileContent('package.json', /['|"]*url['|"]*[ ]*:[ ]*['|"]http:\/\/github.com\/issues['|"]/);
-      assert.fileContent('package.json', /['|"]*homepage['|"]*[ ]*:[ ]*['|"]http:\/\/github.com['|"]/);
-    });
-  });
-  */
-
 });

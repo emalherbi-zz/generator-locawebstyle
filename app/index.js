@@ -7,13 +7,7 @@ var MyGenerator = module.exports = function MyGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    // this.installDependencies({ skipInstall : options['skip-install'] });
-    this.installDependencies({
-      skipInstall : this.options['skip-install'],
-      callback : function () {
-        this.spawnCommand('grunt', ['bower:install']);
-      }.bind(this)
-    });
+    this.installDependencies({ skipInstall : options['skip-install'] });
   });
 };
 
@@ -41,17 +35,7 @@ MyGenerator.prototype.askFor = function askFor() {
     name: 'includeNormalize',
     message: 'Would you like to include normalize.css?',
     default: true
-  }, /*{
-    type: 'confirm',
-    name: 'includeJQuery',
-    message: 'Would you like to include jQuery?',
-    default: true
-  }, {
-    type: 'confirm',
-    name: 'includeLocawebStyle',
-    message: 'Would you like to include LocawebStyle?',
-    default: true
-  },*/ {
+  },{
     type: 'list',
     name: 'nameTheme',
     message: 'Would you like to include LocawebStyle Theme?',
