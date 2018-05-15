@@ -1,38 +1,19 @@
 module.exports = function(grunt) {
   'use strict';
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     properties: grunt.file.readJSON('properties.json'),
-
-    /* bower install */
-    bower: {
-      install: {
-        options: {
-          targetDir: '<%= properties.app %>/lib',
-          layout: 'byComponent',
-          install: true,
-          verbose: false,
-          cleanTargetDir: true,
-          cleanBowerDir: true,
-          bowerOptions: {}
-        }
-      }
-    },
-
     /* clean directories */
     clean: ['<%= properties.dist %>'],
-
     /* prepares the configuration to transform specific construction (blocks)
     in the scrutinized file into a single line, targeting an optimized version
     of the files (e.g concatenated, uglifyjs-ed ...) */
     useminPrepare: {
       html: '<%= properties.app %>/index.html',
-        options: {
-          dest: '<%= properties.dist %>'
-        }
+      options: {
+        dest: '<%= properties.dist %>'
+      }
     },
-
     /* html minification */
     htmlmin: {
       dist: {
@@ -49,7 +30,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-
     /* image minification */
     imagemin: {
       dist: {
@@ -61,17 +41,14 @@ module.exports = function(grunt) {
         }]
       }
     },
-
     /* cssmin */
     /* is not necessary to declare */
-
     /* js file minification */
     uglify: {
       options: {
         preserveComments: false
       }
     },
-
     /* create dir fonts */
     mkdir: {
       all: {
@@ -80,7 +57,6 @@ module.exports = function(grunt) {
         },
       },
     },
-
     /* put files not handled in other tasks here */
     copy: {
       dist: {
@@ -100,7 +76,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-
     /* cache busting */
     rev: {
       options: {
@@ -116,38 +91,33 @@ module.exports = function(grunt) {
         ]
       }
     },
-
     /* replace links to minificated files */
     usemin: {
       html: ['<%= properties.dist %>/index.html'],
-        options: {
-          dirs: ['<%= properties.dist %>']
-        }
+      options: {
+        dirs: ['<%= properties.dist %>']
+      }
     },
-
     /* html minification */
     html_minify: {
-      options: { },
+      options: {},
       all: {
-        files:[{
+        files: [{
           expand: true,
           cwd: '<%= properties.dist %>',
           src: ['*.html'],
           dest: '<%= properties.dist %>',
-          ext:'.html'
+          ext: '.html'
         }]
       }
     }
-
   });
-
   // Loading dependencies
   for (var key in grunt.file.readJSON('package.json').devDependencies) {
     if (key !== 'grunt' && key.indexOf('grunt') === 0) {
       grunt.loadNpmTasks(key);
     }
   }
-
   // tasks
   grunt.registerTask('build', [
     'clean',
@@ -163,7 +133,6 @@ module.exports = function(grunt) {
     'usemin',
     'html_minify'
   ]);
-
   grunt.registerTask('default', [
     'build'
   ]);

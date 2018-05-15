@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="ls-theme-<%= nameTheme %>">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%= appName %></title>
+  <title>
+    <%= appName %>
+  </title>
 
   <!-- build:css css/app.min.css -->
-  <% if (includeNormalize) { %><link rel="stylesheet" href="lib/normalize-css/dist/normalize.css"><% } %><% if (includeLocawebStyle) { %>
-  <link rel="stylesheet" href="lib/locawebstyle/dist/stylesheets/locastyle.css" ><% } %>
+  <link rel="stylesheet" href="node_modules/normalize-css/normalize.css">
+  <link rel="stylesheet" href="node_modules/locawebstyle/dist/stylesheets/locastyle.css">
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
 
@@ -19,6 +22,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
 <body>
   <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><strong>upgrade your browser</strong></a> to improve your experience.</p>
@@ -30,9 +34,15 @@
     <div class="ls-notification-topbar">
       <!-- Link of support/help -->
       <div class="ls-alerts-list">
-        <a href="#" class="ls-ico-bell-o" data-counter="5" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain"><span>Notificações</span></a>
-        <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
-        <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+        <a href="#" class="ls-ico-bell-o" data-counter="5" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain">
+          <span>Notificações</span>
+        </a>
+        <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain">
+          <span>Ajuda</span>
+        </a>
+        <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain">
+          <span>Sugestões</span>
+        </a>
       </div>
 
       <!-- User details -->
@@ -43,8 +53,12 @@
         </a>
         <nav class="ls-dropdown-nav ls-user-menu">
           <ul>
-            <li><a href="#">Conta</a></li>
-            <li><a href="#">Logout</a></li>
+            <li>
+              <a href="#">Conta</a>
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -53,19 +67,25 @@
     <span class="ls-show-sidebar ls-ico-menu"></span>
 
     <!-- Nome do produto/marca -->
-    <h1 class="ls-brand-name"><a class="ls-ico-earth" href="/locawebstyle/documentacao/exemplos/boilerplate">Boilerplate</a></h1>
+    <h1 class="ls-brand-name">
+      <a class="ls-ico-earth" href="/locawebstyle/documentacao/exemplos/boilerplate">Boilerplate</a>
+    </h1>
   </div>
 
   <main class="ls-main ">
     <div class="container-fluid">
       <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
 
-      <p>Este é nosso boilerplate com a estrutura inicial de um projeto. Você pode <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/">ver exemplos completos neste link</a>.</p>
-      <p>Confira nossa <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">documentação com os componentes</a> que você usar aqui.</p>
+      <p>Este é nosso boilerplate com a estrutura inicial de um projeto. Você pode
+        <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/">ver exemplos completos neste link</a>.</p>
+      <p>Confira nossa
+        <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">documentação com os componentes</a> que você usar aqui.</p>
       <hr>
       <h6 class="ls-title-5">English disclaimer</h6>
-      <p>This is your boilerplate with start structure. You can see <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/">completed examples here</a>.</p>
-      <p>Check out the docs to <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">see the components that you can use</a>.</p>
+      <p>This is your boilerplate with start structure. You can see
+        <a href="http://locaweb.github.io/locawebstyle/documentacao/exemplos/">completed examples here</a>.</p>
+      <p>Check out the docs to
+        <a href="http://locaweb.github.io/locawebstyle/documentacao/componentes/">see the components that you can use</a>.</p>
 
     </div>
   </main>
@@ -79,14 +99,18 @@
       </a>
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
-          <li><a href="#">submenu</a></li>
+          <li>
+            <a href="#">submenu</a>
+          </li>
         </ul>
       </nav>
     </div>
 
     <nav class="ls-menu">
       <ul>
-        <li><a href="#" class="ls-ico-home">Página inicial</a></li>
+        <li>
+          <a href="#" class="ls-ico-home">Página inicial</a>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -121,8 +145,12 @@
     <nav class="ls-notification-list" id="ls-help-curtain" style="left: 1756px;">
       <h3 class="ls-title-2">Feedback</h3>
       <ul>
-        <li><a href="#">&gt; quo fugiat facilis nulla perspiciatis consequatur</a></li>
-        <li><a href="#">&gt; enim et labore repellat enim debitis</a></li>
+        <li>
+          <a href="#">&gt; quo fugiat facilis nulla perspiciatis consequatur</a>
+        </li>
+        <li>
+          <a href="#">&gt; enim et labore repellat enim debitis</a>
+        </li>
       </ul>
     </nav>
 
@@ -132,16 +160,21 @@
         <li class="ls-txt-center hidden-xs">
           <a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a>
         </li>
-        <li><a href="#">&gt; Guia</a></li>
-        <li><a href="#">&gt; Wiki</a></li>
+        <li>
+          <a href="#">&gt; Guia</a>
+        </li>
+        <li>
+          <a href="#">&gt; Wiki</a>
+        </li>
       </ul>
     </nav>
   </aside>
 
   <!-- build:js js/app.min.js -->
-  <% if (includeJQuery) { %><script src="lib/jquery/dist/jquery.min.js"></script><% } %><% if (includeLocawebStyle) { %>
-  <script src="lib/locawebstyle/dist/javascripts/locastyle.js"></script><% } %>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/locawebstyle/dist/javascripts/locastyle.js"></script>
   <script src="js/app.js"></script>
   <!-- endbuild -->
 </body>
+
 </html>

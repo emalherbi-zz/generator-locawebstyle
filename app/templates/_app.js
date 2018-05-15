@@ -1,5 +1,6 @@
 /* app js */
-<% if (includeJQuery) { %>$(function() {
-  console.log( "ready!" );
+<% if (includeJQuery) { %>
+$(function() {
+  console.log("ready!");
 });
 <% } %>

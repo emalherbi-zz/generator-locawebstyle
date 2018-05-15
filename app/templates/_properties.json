@@ -1,5 +1,5 @@
 {
-  "lib"  : "app/lib",
-  "app"  : "app",
-  "dist" : "dist"
+  "lib": "app/node_modules",
+  "app": "app",
+  "dist": "dist"
 }

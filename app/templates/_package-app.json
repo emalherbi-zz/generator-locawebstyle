@@ -1,0 +1,13 @@
+{
+  "name": "<%= appName %>",
+  "version": "<%= appVersion %>",
+  "description": "A generator for locawebstyle.",
+  "main": "app/index.html",
+  "author": "emalherbi",
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "^2.3.1",
+    "jquery": "^3.3.1",
+    "locawebstyle": "^3.10.0"
+  }
+}

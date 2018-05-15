@@ -15,7 +15,7 @@ Yeoman helps you kickstart new projects, prescribing best practices and tools to
 #### Installing yo
 
 ```
-npm install -g yo
+npm i -g yo
 ```
 
 Installing generator-locawebstyle
@@ -24,7 +24,7 @@ Installing generator-locawebstyle
 To scaffold a web application, you'll need to install the generator:
 
 ```
-npm install -g generator-locawebstyle
+npm i -g generator-locawebstyle
 ```
 
 Make a new directory, and cd into it:
@@ -39,7 +39,7 @@ Finally, initiate the generator:
 yo locawebstyle
 ```
 
-*Running ```bower install``` & ```npm install``` for you to install the required dependencies.*
+*Running ```npm start``` for you to install the required dependencies.*
 
 ### Layout
 
@@ -51,14 +51,12 @@ app/
 │   ├──
 ├── js/
 │   ├── app.js
-├── lib/
+├── node_modules/
 │   ├── jquery/
 │   ├── locawebstyle/
 │   ├── normalize-css/
 ├── index.html
 ```
-
-*The bower dependencies are installed in lib directory.*
 
 How This Generator Works
 ------------------------
