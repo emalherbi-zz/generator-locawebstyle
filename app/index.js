@@ -91,29 +91,7 @@ MyGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function processAnswers(answers) {
     this.appName = answers.appName;
     this.appVersion = answers.appVersion;
-    this.includeNormalize = true;
-    this.includeJQuery = true;
-    this.includeLocawebStyle = true;
     this.nameTheme = answers.nameTheme;
-    // console.log(answers.nameTheme);
-    // if (answers.nameTheme.indexOf('includeGreen') !== -1) {
-    //   this.nameTheme = 'green';
-    // } else if (answers.nameTheme.indexOf('includeLightGreen') !== -1) {
-    //   this.nameTheme = 'light-green';
-    // } else if (answers.nameTheme.indexOf('includeBlue') !== -1) {
-    //   this.nameTheme = 'blue';
-    // } else if (answers.nameTheme.indexOf('includeGold') !== -1) {
-    //   this.nameTheme = 'gold';
-    // } else if (answers.nameTheme.indexOf('includeGray') !== -1) {
-    //   this.nameTheme = 'gray';
-    // } else if (answers.nameTheme.indexOf('includeOrange') !== -1) {
-    //   this.nameTheme = 'orange';
-    // } else if (answers.nameTheme.indexOf('includeLightRed') !== -1) {
-    //   this.nameTheme = 'light-red';
-    // }
-    if (this.includeLocawebStyle) {
-      this.includeJQuery = true;
-    }
     done();
   }.bind(this));
 };

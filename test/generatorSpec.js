@@ -9,7 +9,6 @@ describe("Mocha/Grunt generator test suite", function() {
     var mockPrompt = {
       appName: 'locawebtest',
       appVersion: '1.0.0',
-      includeNormalize: true,
       nameTheme: 'light-red'
     };
     var mockOptions = {
